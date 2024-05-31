@@ -39,10 +39,29 @@
 
     h2 {
       margin-bottom: 10px;
+      text-align: center; /* Center align the heading */
     }
 
     p {
       margin-bottom: 15px;
+      text-align: center; /* Center align the paragraph */
+    }
+
+    /* Additional Mobile Styling */
+    @media (max-width: 600px) { 
+      .container {
+        width: 90%; 
+      }
+      h2 {
+        font-size: 1.8rem; 
+      }
+      p {
+        font-size: 1rem;
+      }
+      .btn { /* Center button on mobile */
+        display: block;
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
@@ -58,9 +77,9 @@
 
 <main class="container">
   <div class="row">
-    <div class="col s12 m8 offset-m2">
-      <div class="card-panel">
-        <h2>Need Help? We're Here for You</h2>
+    <div class="col s12"> 
+      <div class="card-panel"> 
+        <h2 class="center-align">Need Help? We're Here for You</h2>
         <p>
           Experiencing an issue with The Be Kind Universe? Have a question or feedback for us? We're ready to assist you! Click the button below to send us an email and our dedicated support team will get back to you as soon as possible.
         </p>
@@ -68,7 +87,9 @@
           Please provide as much detail as possible about your issue or question so we can address it promptly and efficiently. Your feedback is valuable to us as we strive to improve our app and provide the best possible experience.
         </p>
 
-        <a href="mailto:dev@thebekindpeopleuniverse.com?subject=New Support Request" class="btn waves-effect waves-light">Email Support</a>
+        <div class="center-align">
+          <a href="mailto:dev@thebekindpeopleuniverse.com?subject=New Support Request" class="btn waves-effect waves-light">Email Support</a>
+        </div>
       </div>
     </div>
   </div>
@@ -91,7 +112,5 @@
     </div>
   </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
